@@ -13,7 +13,28 @@ village_sandcity.replacements_sandcity = function( housetype, pr, replacements )
 	mg_villages.replace_tree_trunk( replacements, wood_type );
 	mg_villages.replace_saplings(   replacements, wood_type );
 
-print('ALL REPLACEMENTS for sandcity: '..minetest.serialize( replacements ));
+	mg_villages.replace_materials( replacements, pr,
+			{'default:sandstonebrick'},
+			{''},
+			{'default:sandstonebrick', 'default:sandstonebrick',
+			'default:clay', 'default:desert_stonebrick', 'default:desert_stone',
+			'default:stonebrick', 'default:obsidianbrick'},
+			'default:sandstonebrick');
+	-- adds stairs and slabs for clay and loam
+	if( minetest.get_modpath( 'cottages' )) then
+		local mat = mg_villages.replace_materials( replacements, pr,
+			{'default:sandstone'},
+			{''},
+			{'default:sandstone', 'default:clay', 'cottages:loam'},
+			'default:sandstone');
+		if(     mat == 'default:clay' ) then
+			table.insert( replacements, {'stairs:stair_sandstone', 'stairs:stair_clay'});
+			table.insert( replacements, {'stairs:slab_sandstone',  'stairs:slab_clay'});
+		elseif( mat == 'cottages:loam') then
+			table.insert( replacements, {'stairs:stair_sandstone', 'stairs:stair_loam'});
+			table.insert( replacements, {'stairs:slab_sandstone',  'stairs:slab_loam'});
+		end
+	end
 	return replacements;
 end
 
