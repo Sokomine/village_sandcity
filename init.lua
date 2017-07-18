@@ -69,7 +69,7 @@ mg_villages.add_building( { scm="sandcity_small_2_1_270", mts_path=path, weight=
 mg_villages.add_building( { scm="sandcity_small_3_1_270", mts_path=path, weight={sandcity=1, single=1}, inh=nil,  typ='house'});
 mg_villages.add_building( { scm="sandcity_small_4_1_270", mts_path=path, weight={sandcity=1, single=1}, inh=nil,  typ='house'});
 mg_villages.add_building( { scm="sandcity_small_5_1_270", mts_path=path, weight={sandcity=1, single=1}, inh=nil,  typ='house'});
-mg_villages.add_building( { scm="sandcity_meeting_small_1_1_270", mts_path=path, weight={sandcity=1, single=1}, inh=nil,  typ='house'});
+mg_villages.add_building( { scm="sandcity_meeting_small_1_1_270", mts_path=path, weight={sandcity=1, single=1}, inh=nil,  typ='townhall'});
 mg_villages.add_building( { scm="sandcity_ap_tower_1_1_270", mts_path=path, weight={sandcity=1, single=1}, inh=nil,  typ='house'});
 mg_villages.add_building( { scm="sandcity_ap_tower_2_1_270", mts_path=path, weight={sandcity=1, single=1}, inh=nil,  typ='house'});
 mg_villages.add_building( { scm="sandcity_ap_tower_3_1_270", mts_path=path, weight={sandcity=1, single=1}, inh=nil,  typ='house'});
